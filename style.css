@@ -1754,3 +1754,22 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   @media (min-width: 900px) {
     #экран-04 .курс-итог { grid-template-columns: minmax(16rem, .82fr) 1fr; align-items: center; gap: 2rem; }
   }
+
+/* экран 05 */
+#экран-05.светлый, #экран-05.тёмный { background: linear-gradient(180deg, var(--фон-ключа), var(--фон-2-ключа) 50%, var(--фон-ключа)); }
+
+  #экран-05 .части-программы { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
+  #экран-05 .часть-карточка { border-radius: var(--радиус-плитки, var(--радиус-карточки)); padding: 1.125rem; }
+  #экран-05 .часть__верх { display: grid; grid-template-columns: 1fr; gap: .875rem; margin-bottom: .875rem; }
+  #экран-05 .часть__обложка { margin: 0; }
+  #экран-05 .часть__обложка .заглушка-картинки { aspect-ratio: 16 / 7; min-height: 0; border-radius: var(--радиус-малый); font-size: var(--кегль-мелкий); line-height: 1.35; padding: .5rem; text-align: center; }
+  #экран-05 .часть__шапка { display: grid; gap: .25rem; margin: 0; }
+  #экран-05 .итог-программы { margin-top: 1.5rem; }
+  @media (min-width: 900px) {
+    #экран-05 .части-программы { gap: 1.5rem; }
+    #экран-05 .часть__верх { grid-template-columns: 14rem 1fr; align-items: center; }
+    #экран-05 .часть__обложка .заглушка-картинки { aspect-ratio: 16 / 10; }
+  }
+  #экран-05.светлый .часть-карточка { background: var(--цвет-фон-2); border: 1px solid var(--цвет-линия); }
+  #экран-05.тёмный .часть-карточка { background: color-mix(in srgb, var(--цвет-тёмный-фон) 40%, transparent);
+    border: 1px solid color-mix(in srgb, var(--цвет-тёплый, var(--цвет-акцент-тёмный)) 18%, transparent); }

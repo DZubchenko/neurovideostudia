@@ -1816,3 +1816,77 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-06 .работа { min-height: calc((100cqw - 3rem) / 4 * 1.4444); }
   }
   #экран-06 .работы-плитки + .мелкий { margin-top: var(--отступ-блока); }
+
+/* экран 07 */
+#экран-07 .о-себе__сетка { display: grid; gap: var(--отступ-блока); align-items: center; }
+  #экран-07 .о-себе__текст p:not(.секция__лид):not(.кикер) { max-width: 34em; }
+  #экран-07 .о-себе__фото .заглушка-картинки { aspect-ratio: 4 / 5; min-height: 0; }
+  #экран-07 .цифры { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (min-width: 900px) {
+    #экран-07 .о-себе__сетка { grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+      gap: calc(var(--отступ-блока) * 1.4); }
+    #экран-07 .о-себе__фото { order: 2; }
+    #экран-07 .о-себе__текст { order: 1; }
+  }
+
+/* экран 08 */
+#экран-08 .вопросы-блок { display: grid; gap: calc(var(--отступ-блока) * 1.15); }
+  #экран-08 .вопросы-шапка { max-width: none; }
+  #экран-08 .вопросы-шапка h2 { max-width: 13em; }
+  @media (min-width: 900px) {
+    #экран-08 .вопросы-блок { grid-template-columns: minmax(14rem, 19rem) minmax(0, 1fr);
+      gap: calc(var(--отступ-блока) * 1.8); align-items: start; }
+    #экран-08 .вопросы-шапка { margin-bottom: 0; }
+  }
+
+/* экран 09 */
+#экран-09 .тарифы { display: grid; gap: 1.25rem; margin-top: var(--отступ-блока); }
+#экран-09 .тариф { height: 100%; }
+#экран-09 .тариф__пояснение { margin-top: -.25rem; }
+
+@media (min-width: 900px) {
+  #экран-09 .тарифы { grid-template-columns: repeat(3, 1fr); align-items: start; gap: 1.5rem; }
+
+  #экран-09 .тариф--акцент { transform: translateY(-1rem); }
+}
+
+/* экран 10 */
+#экран-10.светлый, #экран-10.тёмный { background: linear-gradient(180deg, var(--фон-ключа), var(--фон-2-ключа) 50%, var(--фон-ключа)); }
+
+  #экран-10 .условия-обзор { display: grid; gap: clamp(1.5rem, 4vw, 2.25rem); }
+  #экран-10 .условия-обзор__шапка { margin-bottom: 0; }
+  #экран-10 .условия { max-width: none; }
+  @media (min-width: 900px) {
+    #экран-10 .условия-обзор { grid-template-columns: minmax(14rem, .7fr) minmax(20rem, 1fr);
+      align-items: start; gap: clamp(2rem, 5vw, 3.5rem); }
+    #экран-10 .условия-обзор__шапка { position: sticky; top: clamp(1.5rem, 4vw, 3rem); }
+  }
+
+/* экран 11 */
+#экран-11 .бенто { display: grid; gap: 1rem; grid-template-columns: 1fr; margin-top: 2rem; }
+  #экран-11 .бенто > .роль { display: flex; flex-direction: column; height: 100%; }
+  #экран-11 .бенто .фото { margin: 0 0 1rem; flex: none; }
+  #экран-11 .бенто .заглушка-картинки { min-height: 0; border-radius: var(--радиус-малый); font-size: var(--кегль-мелкий); }
+  #экран-11 .бенто-карусели .заглушка-картинки, #экран-11 .бенто-стиль .заглушка-картинки, #экран-11 .бенто-оснастка .заглушка-картинки { aspect-ratio: 16 / 9; }
+  @media (min-width: 900px) { #экран-11 .бенто-миллион .фото { flex: 1 1 auto; display: flex; } #экран-11 .бенто-миллион .заглушка-картинки { flex: 1; } }
+  @media (min-width: 900px) {
+    #экран-11 .бенто {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "карусели стиль миллион"
+        "оснастка оснастка миллион";
+      gap: 1.25rem; grid-template-rows: auto auto; height: auto;
+    }
+    #экран-11 .бенто-карусели { grid-area: карусели; }
+    #экран-11 .бенто-стиль { grid-area: стиль; }
+    #экран-11 .бенто-миллион { grid-area: миллион; }
+    #экран-11 .бенто > .бенто-оснастка { grid-area: оснастка; display: grid; grid-template-columns: 1fr 1.4fr; column-gap: 1.25rem; align-items: center; }
+    #экран-11 .бенто-оснастка .фото { margin: 0; }
+    #экран-11 .бенто-оснастка .заглушка-картинки { aspect-ratio: 4 / 3; }
+  }
+
+/* экран 12 */
+#экран-12 .мелкий { text-align: center; }
+
+  #экран-12 .финал-действие { margin-top: var(--отступ-блока); display: grid; justify-items: center;
+    gap: .75rem; }

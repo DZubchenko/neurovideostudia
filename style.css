@@ -1744,3 +1744,13 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-03 .бенто-цена { grid-area: цена; }
     #экран-03 .бенто-итог { grid-area: итог; }
   }
+
+/* экран 04 */
+#экран-04 .курс-итог { display: grid; gap: 1.25rem; margin-top: 0; }
+  #экран-04 .лента + .курс-итог { margin-top: 1.5rem; }
+  #экран-04 .курс-итог .фото { margin: 0; }
+  #экран-04 .курс-итог .заглушка-картинки { aspect-ratio: 16 / 9; min-height: 0; border-radius: var(--радиус-малый); font-size: var(--кегль-мелкий); }
+  #экран-04 .курс-итог .врезка { margin: 0; }
+  @media (min-width: 900px) {
+    #экран-04 .курс-итог { grid-template-columns: minmax(16rem, .82fr) 1fr; align-items: center; gap: 2rem; }
+  }

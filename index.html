@@ -101,10 +101,12 @@
     #экран-1 .первый-экран__когда { order: 7; }
     #экран-1 .первый-экран__доверие { order: 8; }
     @media (min-width: 900px) {
-      #экран-1 { padding-top: clamp(4.5rem, 14vh, 10rem); }
-      #экран-1 .лид { font-size: 1.3rem; }
-      #экран-1 .список-иконок { max-width: 32rem; margin-top: 1.4em; }
-      #экран-1 .список-иконок li { font-size: 1.15rem; }
+      #экран-1 { padding-top: clamp(4rem, 12vh, 10rem); }
+      #экран-1 h1 { font-size: clamp(2.2rem, 6.2vh, 3.6rem); margin-bottom: .35em; }
+      #экран-1 .кикер { margin-bottom: .6em; }
+      #экран-1 .лид { font-size: clamp(1rem, 2.3vh, 1.2rem); margin-bottom: 1em; }
+      #экран-1 .список-иконок { max-width: 32rem; margin-top: 1.1em; }
+      #экран-1 .список-иконок li { font-size: clamp(.9rem, 2vh, 1.05rem); line-height: 1.4; margin-bottom: .3em; }
     }
     @media (max-width: 899px) {
       #экран-1 h1 { font-size: 1.9rem; margin-bottom: .45em; }

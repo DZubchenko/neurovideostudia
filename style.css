@@ -1773,3 +1773,12 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-05.светлый .часть-карточка { background: var(--цвет-фон-2); border: 1px solid var(--цвет-линия); }
   #экран-05.тёмный .часть-карточка { background: color-mix(in srgb, var(--цвет-тёмный-фон) 40%, transparent);
     border: 1px solid color-mix(in srgb, var(--цвет-тёплый, var(--цвет-акцент-тёмный)) 18%, transparent); }
+
+/* экран 06 */
+#экран-06 .работы-плитки { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
+    container-type: inline-size; }
+  @media (min-width: 640px) {
+    #экран-06 .работы-плитки { grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    #экран-06 .работа { min-height: calc((100cqw - 3rem) / 4 * 1.4444); }
+  }
+  #экран-06 .работы-плитки + .мелкий { margin-top: var(--отступ-блока); }

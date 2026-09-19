@@ -1774,6 +1774,40 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-05.тёмный .часть-карточка { background: color-mix(in srgb, var(--цвет-тёмный-фон) 40%, transparent);
     border: 1px solid color-mix(in srgb, var(--цвет-тёплый, var(--цвет-акцент-тёмный)) 18%, transparent); }
 
+  #экран-05 .модуль__тело { gap: .875rem; }
+  #экран-05 .модуль__тело .модуль__зачем { font-size: var(--кегль-текст); }
+  #экран-05 .модуль__подпись { font-size: var(--кегль-мелкий); letter-spacing: .08em; text-transform: uppercase; font-weight: 700; margin: .25rem 0 -.25rem; }
+  #экран-05 .модуль__уроки { display: grid; gap: .625rem; margin: 0; padding: 0; list-style: none; }
+  #экран-05 .модуль__уроки li { position: relative; padding-left: 1.25rem; font-size: var(--кегль-текст); line-height: 1.55; }
+  #экран-05 .модуль__уроки li::before { content: ""; position: absolute; left: .125rem; top: .62em; width: .4375rem; height: .4375rem; border-radius: 50%; }
+  #экран-05 .модуль__тело .модуль__цитата { font-style: italic; padding-left: .875rem; }
+  @media (max-width: 639px) { #экран-05 .модуль__тело { padding-left: 1.125rem; } }
+  #экран-05.светлый .модуль__тело .модуль__зачем, #экран-05.светлый .модуль__уроки li { color: var(--цвет-текст); }
+  #экран-05.светлый .модуль__подпись { color: var(--цвет-акцент); }
+  #экран-05.светлый .модуль__уроки li::before { background: var(--цвет-акцент); }
+  #экран-05.светлый .модуль__цитата { border-left: 2px solid var(--цвет-линия); }
+  #экран-05.тёмный .модуль__тело .модуль__зачем, #экран-05.тёмный .модуль__уроки li { color: var(--текст-ключа, var(--цвет-тёмный-текст)); }
+  #экран-05.тёмный .модуль__подпись { color: var(--тёплый-ключа, var(--цвет-акцент-тёмный)); }
+  #экран-05.тёмный .модуль__уроки li::before { background: var(--тёплый-ключа, var(--цвет-акцент-тёмный)); }
+  #экран-05.тёмный .модуль__цитата { border-left: 2px solid color-mix(in srgb, var(--текст-ключа, var(--цвет-тёмный-текст)) 25%, transparent); }
+
+  #экран-05 .модуль__связка { display: grid; gap: .5rem; align-items: center; }
+  #экран-05 .модуль__внутри { display: grid; gap: .875rem; }
+  #экран-05 .модуль__стрелка { display: grid; place-items: center; }
+  #экран-05 .модуль__стрелка svg { width: 3rem; height: 1.5rem; transform: rotate(90deg); }
+  #экран-05 .модуль__итог { display: grid; gap: .375rem; padding: 1rem 1.125rem; border-radius: var(--радиус-малый); }
+  #экран-05 .модуль__итог .модуль__результат { font-weight: 700; font-size: var(--кегль-текст); line-height: 1.45; }
+  #экран-05 .кнопки-программы { margin-top: 1.5rem; display: flex; justify-content: center; }
+  @media (min-width: 900px) {
+    #экран-05 .модуль__связка { grid-template-columns: minmax(0, 1.6fr) auto minmax(0, 1fr); gap: 1rem; }
+    #экран-05 .модуль__стрелка svg { transform: none; }
+  }
+  #экран-05.светлый .модуль__стрелка { color: var(--цвет-акцент); }
+  #экран-05.светлый .модуль__итог { background: var(--цвет-фон-карточки); border: 2px solid var(--цвет-акцент); }
+  #экран-05.светлый .модуль__итог .модуль__результат { color: var(--цвет-текст); }
+  #экран-05.тёмный .модуль__стрелка { color: var(--тёплый-ключа, var(--цвет-акцент-тёмный)); }
+  #экран-05.тёмный .модуль__итог { border: 2px solid var(--тёплый-ключа, var(--цвет-акцент-тёмный)); }
+
 /* экран 06 */
 #экран-06 .работы-плитки { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
     container-type: inline-size; }

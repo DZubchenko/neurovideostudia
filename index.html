@@ -103,7 +103,7 @@
 </script>
 </head>
 <body class="с-липкой-кнопкой">
-<section class="блок блок--первый-экран первый-экран--живая-сцена тёмный" id="экран-1" data-тип="первый-экран" data-схема="живая-сцена" data-ключ-макета="тёмная" data-картинка="видео-с-голосом" style="--добор-затемнения: 0; --добор-высветления: 0; --лицо-в-кадре: .22">
+<section class="блок блок--первый-экран первый-экран--живая-сцена тёмный" id="экран-1" data-тип="первый-экран" data-схема="живая-сцена" data-ключ-макета="тёмная" data-картинка="видео-с-голосом" style="--добор-затемнения: .21; --добор-высветления: 0; --лицо-в-кадре: .22">
 
   <style>
     #экран-1 .первый-экран__текст { display: flex; flex-direction: column; align-items: flex-start; }
@@ -124,6 +124,8 @@
       #экран-1 .кикер { margin-bottom: .6em; }
       #экран-1 .лид { font-size: 1rem; margin-bottom: .9em; }
       #экран-1 .список-иконок { font-size: .95rem; }
+      /* 21.09: низ фото растворяется в фоне секции — раньше кадр обрывался ровной чертой посреди кнопки */
+      #экран-1 .первый-экран__картинка { -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent); mask-image: linear-gradient(to bottom, #000 70%, transparent); }
       #экран-1 .звук-блок { top: calc(var(--отступ-секции) * 2.2 + min(35vh, calc(var(--отступ-секции) * 5.3)) - 7.5em); }
     }
   </style>
@@ -133,8 +135,9 @@
   <path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6L12 3z"/>
 </svg><span><span class="полн">Лицензия № Л035-01261-30/01053865</span></span></span>
   </header>
-  <figure class="картинка картинка--видео-с-голосом первый-экран__картинка"><video autoplay muted loop playsinline preload="auto" poster="video/кадр.svg" data-лицо="50,22" aria-label="НейроВидеоСтудия: научитесь делать видео из ничего"><source src="video/.mp4" type="video/mp4"></video><img src="video/кадр.svg" alt="НейроВидеоСтудия: научитесь делать видео из ничего" data-лицо="50,22"></figure>
-  <div class="звук-блок" data-звук="выкл">
+  <figure class="картинка картинка--видео-с-голосом первый-экран__картинка"><video autoplay muted loop playsinline preload="auto" poster="img/natela-oblozhka.webp" data-лицо="50,22" aria-label="НейроВидеоСтудия: научитесь делать видео из ничего"><source src="video/.mp4" type="video/mp4"></video><img src="img/natela-oblozhka.webp" alt="Натэла Зубченко в съёмочной студии рядом с камерой" data-лицо="50,22"></figure>
+
+  <div class="звук-блок" data-звук="выкл" hidden style="display:none">
     <button class="звук" type="button" aria-pressed="false" aria-label="Включить звук"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"/><path class="звук__вкл" hidden d="M15.5 8.5a5 5 0 010 7M18.5 5.5a9 9 0 010 13"/><path class="звук__выкл" d="M16 9l5 6M21 9l-5 6"/></svg><span class="звук__подпись">Включить звук</span></button>
     <span class="звук__почему"><span class="звук__почему-длинно">видео идёт без звука — нажмите, чтобы услышать</span><span class="звук__почему-коротко">сейчас видео без звука</span></span>
   </div>
@@ -177,7 +180,7 @@
           <h3>Фрилансеру</h3>
           <p>брать более дорогие заказы и сделать работу интереснее</p>
         </div>
-        <figure class="фото строка-роли__кадр"><div class="заглушка-картинки">пример формата · рекламный ролик</div></figure>
+        <figure class="фото строка-роли__кадр"><img src="img/primer-reklama.webp" alt="Кадр рекламного ролика, снятого нейросетью: тёмно-синий автомобиль на брусчатке у набережной на закате" width="1600" height="900" loading="lazy"><figcaption>пример формата · рекламный ролик</figcaption></figure>
       </li>
       <li class="строка-роли">
         <span class="строка-роли__номер">02</span>
@@ -185,7 +188,7 @@
           <h3>Эксперту</h3>
           <p>продвигать свои услуги яркими видео, когда на ролик каждую неделю не хватит никакого бюджета</p>
         </div>
-        <figure class="фото строка-роли__кадр"><div class="заглушка-картинки">пример формата · говорящий аватар</div></figure>
+        <figure class="фото строка-роли__кадр"><img src="img/primer-avatar.webp" alt="Ноутбук на столе в светлой комнате, на экране говорящий мультяшный аватар" width="1600" height="900" loading="lazy"><figcaption>пример формата · говорящий аватар</figcaption></figure>
       </li>
       <li class="строка-роли">
         <span class="строка-роли__номер">03</span>
@@ -193,7 +196,7 @@
           <h3>Таргетологу и продавцу</h3>
           <p>креативы и товарные видео пачками, под каждый оффер и каждую карточку</p>
         </div>
-        <figure class="фото строка-роли__кадр"><div class="заглушка-картинки">пример формата · товарное видео</div></figure>
+        <figure class="фото строка-роли__кадр"><img src="img/primer-tovar.webp" alt="Кадр товарного видео: флакон духов на каменном подиуме в тёплом закатном свете" width="1600" height="900" loading="lazy"><figcaption>пример формата · товарное видео</figcaption></figure>
       </li>
     </ol>
   </div>
@@ -210,25 +213,25 @@
   <div class="бенто">
     <div class="роль бенто-герой">
       <div class="бенто-пара">
-        <figure class="фото"><div class="заглушка-картинки">было: фото</div></figure>
+        <figure class="фото"><img src="img/primer-bylo.webp" alt="Обычное фото синей керамической чашки на столе у окна" width="1086" height="1448" loading="lazy"><figcaption>было: фото</figcaption></figure>
         <span class="бенто-пара__стрелка" aria-hidden="true">→</span>
-        <figure class="фото"><div class="заглушка-картинки">стало: видео</div></figure>
+        <figure class="фото"><img src="img/primer-stalo.webp" alt="Та же чашка в кадре рекламного ролика: пар, брызги и кофейные зёрна в воздухе" width="1086" height="1448" loading="lazy"><figcaption>стало: видео</figcaption></figure>
       </div>
       <b>Карточка своего героя и товара</b>
       <p>сквозной проект: дальше они работают во всех роликах</p>
     </div>
     <div class="роль бенто-шоурил">
-      <figure class="фото"><div class="заглушка-картинки">кадр шоурила</div></figure>
+      <figure class="фото"><img src="img/primer-shouril.webp" alt="Из старой фотографии в рамке вылетают бумажные птицы" width="1600" height="900" loading="lazy"><figcaption>пример формата · шоурил</figcaption></figure>
       <b>Шоурил, который не стыдно выложить</b>
       <p>из модуля про оживление фото, логотипов и продуктов</p>
     </div>
     <div class="роль бенто-двойник">
-      <figure class="фото"><div class="заглушка-картинки">говорящий двойник</div></figure>
+      <figure class="фото"><img src="img/primer-dvoinik.webp" alt="Мультяшная героиня говорит в студийный микрофон" width="1600" height="900" loading="lazy"><figcaption>пример формата · говорящий двойник</figcaption></figure>
       <b>Говорящий двойник</b>
       <p>ваш герой говорит вашим голосом, и законченный ролик с ним</p>
     </div>
     <div class="роль бенто-цена">
-      <figure class="фото"><div class="заглушка-картинки">слайд питч-презентации</div></figure>
+      <figure class="фото"><img src="img/primer-pitch.webp" alt="Планшет со слайдом презентации для клиента: кадры роликов, график и цена" width="1600" height="900" loading="lazy"><figcaption>пример формата · слайд питч-презентации</figcaption></figure>
       <b>Расчёт цены, питч-презентация и портфолио</b>
       <p>на тарифах «Студия» и «Режиссёр»</p>
     </div>
@@ -299,7 +302,7 @@
   <div class="части-программы секция__тело">
     <div class="часть-карточка">
       <div class="часть__верх">
-        <figure class="фото часть__обложка"><div class="заглушка-картинки">пример формата · Часть I</div></figure>
+        <figure class="фото часть__обложка"><img src="img/chast-1.webp" alt="Разложенные фотографии: над одной поднимаются лепестки и золотая пыль — фото оживает" width="1586" height="992" loading="lazy"><figcaption>пример формата</figcaption></figure>
         <div class="часть__шапка">
           <span class="часть__имя">Часть I. Вход и ранний результат</span>
           <span class="часть__метка">модули 1–3 · 17 уроков · недели 1–2</span>
@@ -400,7 +403,7 @@
 
     <div class="часть-карточка">
       <div class="часть__верх">
-        <figure class="фото часть__обложка"><div class="заглушка-картинки">пример формата · Часть II</div></figure>
+        <figure class="фото часть__обложка"><img src="img/chast-2.webp" alt="Раскадровка на столе, фигурка героя, микрофон и наушники" width="1586" height="992" loading="lazy"><figcaption>пример формата</figcaption></figure>
         <div class="часть__шапка">
           <span class="часть__имя">Часть II. База</span>
           <span class="часть__метка">модули 4–8 · 31 урок · недели 3–7</span>
@@ -561,7 +564,7 @@
 
     <div class="часть-карточка">
       <div class="часть__верх">
-        <figure class="фото часть__обложка"><div class="заглушка-картинки">пример формата · Часть III</div></figure>
+        <figure class="фото часть__обложка"><img src="img/chast-3.webp" alt="Съёмочная площадка: сумка на подиуме, телефон на штативе, вешалка с одеждой" width="1586" height="992" loading="lazy"><figcaption>пример формата</figcaption></figure>
         <div class="часть__шапка">
           <span class="часть__имя">Часть III. Форматы</span>
           <span class="часть__метка">модули 9–12 · 32 урока · недели 8–12</span>
@@ -699,7 +702,7 @@
 
     <div class="часть-карточка">
       <div class="часть__верх">
-        <figure class="фото часть__обложка"><div class="заглушка-картинки">пример формата · Часть IV</div></figure>
+        <figure class="фото часть__обложка"><img src="img/chast-4.webp" alt="Рабочий стол: ноутбук, таблица в блокноте, калькулятор и папка с договором" width="1586" height="992" loading="lazy"><figcaption>пример формата</figcaption></figure>
         <div class="часть__шапка">
           <span class="часть__имя">Часть IV. Деньги</span>
           <span class="часть__метка">модуль 13 · 7 уроков · неделя 12</span>
@@ -796,7 +799,7 @@
 <div class="блок__внутри">
   <div class="о-себе__сетка">
     <figure class="фото о-себе__фото">
-      <div class="заглушка-картинки">ролик Натэлы</div>
+      <img src="img/natela-studiya.webp" alt="Натэла Зубченко в съёмочной студии, опирается на стол" width="1280" height="853" loading="lazy">
     </figure>
     <div class="о-себе__текст">
       <div class="секция__шапка">
@@ -944,22 +947,22 @@
   </div>
   <div class="бенто">
     <div class="роль бенто-карусели">
-      <figure class="фото"><div class="заглушка-картинки">кадр карусели</div></figure>
+      <figure class="фото"><img src="img/bonus-karuseli.webp" alt="Смартфон на столе: карусель из квадратных слайдов складывается в одну панораму тёплого пейзажа, рядом разложены отдельные слайды" width="1600" height="900" loading="lazy"><figcaption>пример формата · карусели</figcaption></figure>
       <b>Анимированные бесшовные карусели</b>
       <p>5 уроков: семь структур карусели, анимация по слайдам и прайс по слайдам, чтобы «сделайте карусельку» не стало неделей бесплатных правок</p>
     </div>
     <div class="роль бенто-стиль">
-      <figure class="фото"><div class="заглушка-картинки">код стиля в Midjourney</div></figure>
+      <figure class="фото"><img src="img/bonus-stil.webp" alt="Мудборд на стене: девять картинок в одном стиле — пейзажи, предметы и мультяшный щенок — рядом образцы цвета и ткани" width="1600" height="900" loading="lazy"><figcaption>пример формата · код стиля</figcaption></figure>
       <b>Фирменный стиль серии на Midjourney</b>
       <p>числовой код стиля, который переносится между роликами и передаётся коллеге: для серии под одного клиента</p>
     </div>
     <div class="роль кромка--тёплый бенто-миллион">
-      <figure class="фото"><div class="заглушка-картинки">кадр курса «Миллион за эфир»</div></figure>
+      <figure class="фото"><img src="img/natela-kurtka.webp" alt="Натэла Зубченко, автор курса «Миллион за эфир»" width="853" height="1280" loading="lazy"></figure>
       <b>Курс «Миллион за эфир» целиком</b>
       <p>работа с камерой, снятие страха, уверенность в кадре: тем, кто собрался показывать своё лицо в аватаре и рилсах</p>
     </div>
     <div class="роль бенто-оснастка">
-      <figure class="фото"><div class="заглушка-картинки">бриф и смета заказа</div></figure>
+      <figure class="фото"><img src="img/bonus-osnastka.webp" alt="Стол сверху: бриф и смета с таблицами, планшет с раскадровкой, ручка, скрепки и чашка кофе" width="1448" height="1086" loading="lazy"><figcaption>пример формата · бриф и смета</figcaption></figure>
       <div>
         <b>Оснастка для заказа</b>
         <p>бриф, смета, тритмент-презентация, пакеты под нишу, бот для промптов и сборка портфолио с разбором</p>

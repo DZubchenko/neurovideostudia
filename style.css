@@ -1756,6 +1756,8 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-04 .курс-итог .фото { margin: 0; }
   #экран-04 .курс-итог .заглушка-картинки { aspect-ratio: 16 / 9; min-height: 0; border-radius: var(--радиус-малый); font-size: var(--кегль-мелкий); }
   #экран-04 .курс-итог .врезка { margin: 0; }
+
+  #экран-04 .шаг { border-radius: var(--радиус-карточки); }
   @media (min-width: 900px) {
     #экран-04 .курс-итог { grid-template-columns: minmax(16rem, .82fr) 1fr; align-items: center; gap: 2rem; }
   }
@@ -1764,7 +1766,9 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-05.светлый, #экран-05.тёмный { background: linear-gradient(180deg, var(--фон-ключа), var(--фон-2-ключа) 50%, var(--фон-ключа)); }
 
   #экран-05 .части-программы { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
-  #экран-05 .часть-карточка { border-radius: var(--радиус-плитки, var(--радиус-карточки)); padding: 1.125rem; }
+
+  #экран-05 { --радиус-модуля: var(--радиус-карточки); }
+  #экран-05 .часть-карточка { border-radius: var(--радиус-карточки); padding: 1.125rem; }
   #экран-05 .часть__верх { display: grid; grid-template-columns: 1fr; gap: .875rem; margin-bottom: .875rem; }
   #экран-05 .часть__обложка { margin: 0; }
   #экран-05 .часть__обложка .заглушка-картинки { aspect-ratio: 16 / 7; min-height: 0; border-radius: var(--радиус-малый); font-size: var(--кегль-мелкий); line-height: 1.35; padding: .5rem; text-align: center; }
@@ -1812,10 +1816,11 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-05 .модуль__стрелка svg { transform: none; }
   }
   #экран-05.светлый .модуль__стрелка { color: var(--цвет-акцент); }
-  #экран-05.светлый .модуль__итог { background: var(--цвет-фон-карточки); border: 2px solid var(--цвет-акцент); }
+
+  #экран-05.светлый .модуль__итог { background: var(--цвет-фон-карточки); border: 1px solid var(--цвет-акцент); }
   #экран-05.светлый .модуль__итог .модуль__результат { color: var(--цвет-текст); }
   #экран-05.тёмный .модуль__стрелка { color: var(--тёплый-ключа, var(--цвет-акцент-тёмный)); }
-  #экран-05.тёмный .модуль__итог { border: 2px solid var(--тёплый-ключа, var(--цвет-акцент-тёмный)); }
+  #экран-05.тёмный .модуль__итог { border: 1px solid var(--тёплый-ключа, var(--цвет-акцент-тёмный)); }
 
 /* экран 06 */
 #экран-06 .работы-плитки { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
@@ -1852,6 +1857,16 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-09 .тарифы { display: grid; gap: 1.25rem; margin-top: var(--отступ-блока); }
 #экран-09 .тариф { height: 100%; }
 #экран-09 .тариф__пояснение { margin-top: -.25rem; }
+
+#экран-09 .тариф__фото { display: block; width: 4.5rem; height: 4.5rem; top: -1.5rem; margin: 0; }
+
+@media (max-width: 899px) {
+  #экран-09 .тариф--акцент { grid-template-columns: 1fr auto; }
+  #экран-09 .тариф--акцент > * { grid-column: 1 / -1; }
+  #экран-09 .тариф--акцент .тариф__метка { grid-row: 1; }
+  #экран-09 .тариф--акцент .тариф__имя { grid-row: 2; grid-column: 1; align-self: center; }
+  #экран-09 .тариф--акцент .тариф__фото { position: static; grid-row: 2; grid-column: 2; align-self: center; width: 4rem; height: 4rem; }
+}
 
 @media (min-width: 900px) {
   #экран-09 .тарифы { grid-template-columns: repeat(3, 1fr); align-items: start; gap: 1.5rem; }

@@ -1918,3 +1918,18 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 
   #экран-12 .финал-действие { margin-top: var(--отступ-блока); display: grid; justify-items: center;
     gap: .75rem; }
+
+/* экран 13 */
+#экран-13 .подвал__сетка { display: grid; grid-template-columns: 1.1fr .9fr 1.5fr; gap: var(--отступ-блока); align-items: start; }
+  #экран-13 .подвал__знак { display: block; font-weight: 700; font-size: var(--кегль-текст); margin: 0 0 .4em; }
+  #экран-13 .подвал__подпись { margin: 0; font-size: var(--кегль-мелкий); color: var(--цвет-текст-мягкий); }
+  #экран-13 .подвал__заголовок { margin: 0 0 .75em; font-size: var(--кегль-мелкий); font-weight: 700;
+    letter-spacing: var(--разрядка-кикера); text-transform: uppercase; color: var(--цвет-текст-тихий, var(--цвет-текст-мягкий)); }
+  #экран-13 .подвал__ссылки { display: flex; flex-direction: column; gap: .5em; }
+  #экран-13 .подвал__ссылки a { font-size: var(--кегль-мелкий); text-decoration: none; color: var(--цвет-текст-мягкий); }
+  #экран-13 .подвал__ссылки a:hover { color: var(--цвет-акцент); text-decoration: underline; }
+  #экран-13 .подвал__низ { margin-top: var(--отступ-блока); padding-top: var(--отступ-блока); border-top: 1px solid var(--цвет-линия); }
+  #экран-13 .подвал__низ p { margin: 0; font-size: var(--кегль-мелкий); color: var(--цвет-текст-тихий, var(--цвет-текст-мягкий)); }
+  @media (max-width: 899px) {
+    #экран-13 .подвал__сетка { grid-template-columns: 1fr; gap: calc(var(--отступ-блока) * 1.3); }
+  }

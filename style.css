@@ -26,8 +26,8 @@ a { color: var(--цвет-акцент); text-underline-offset: .15em; }
 .блок__внутри { z-index: 1; }  .блок__внутри > :last-child { margin-bottom: 0; }
 .светлый { background: var(--цвет-фон); color: var(--цвет-текст); }  .светлый.второй { background: var(--цвет-фон-2); }
 
-.край-полотна { position: absolute; inset-inline: 0; height: min(var(--отступ-секции), 8rem); pointer-events: none; z-index: 1; }
-.край-полотна--верх { top: 0; background: linear-gradient(var(--фон-ключа), transparent); }  .край-полотна--низ { bottom: 0; background: linear-gradient(transparent, var(--фон-ключа)); }
+.край-полотна { position: absolute; inset-inline: 0; height: min(var(--отступ-секции), 8rem); pointer-events: none; z-index: 1; --край: color-mix(in srgb, var(--фон-ключа) 0%, transparent); }
+.край-полотна--верх { top: 0; background: linear-gradient(var(--фон-ключа), var(--край)); }  .край-полотна--низ { bottom: 0; background: linear-gradient(var(--край), var(--фон-ключа)); }
 .блок:has(> .край-полотна) > .блок__внутри { z-index: 2; }
 
 body, .светлый { --фон-ключа: var(--цвет-фон); --фон-2-ключа: var(--цвет-фон-2, var(--цвет-фон)); --текст-ключа: var(--цвет-текст); --подложка-ключа: transparent;
